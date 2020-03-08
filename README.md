@@ -12,6 +12,13 @@
 - @Disabled: omite clases o metodos, acepta una descripcion.
 - @Tag("txt"): permite agrupar metodos o clases con tags para luego filtrarlos
 - org.junit.jupiter.api.Assumptions: verificaciones del entorno necesarias para poder ejecutar los test (usado para prevenir que se ejecuten los test bajo ciertas circunstancias del entorno)
+- ParameterResolver: resuelve parametros en runtime, hay 3 resolvers por defecto usando @ExtendWith se pueden registrar otros.
+: TestInfo
+    @Test, @BeforeEach, @AfterEach, @BeforeAll & @AfterAll
+: TestReporter
+    @BeforeEach, @AfterEach & @Test
+: RepetitionInfo
+    @RepeatedTest
 
 ```
 
