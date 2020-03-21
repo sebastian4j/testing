@@ -9,6 +9,8 @@ import static org.junit.jupiter.api.Assumptions.*;
 import org.junit.jupiter.api.BeforeAll;
 
 /**
+ * Assumptions: prevenir que test sean ejecutados.
+ * 
  * @author Sebastián Ávila A.
  */
 public class Asserts1Test {

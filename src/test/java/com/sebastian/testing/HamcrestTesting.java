@@ -6,6 +6,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -76,13 +77,20 @@ import org.junit.jupiter.api.Test;
  */
 public class HamcrestTesting {
   @Test
+	@Tag("hamcrest")
   @DisplayName("List with Hamcrest")
   public void testListWithHamcrest() {
     final var values = List.of("Oliver", "2", "3");
-		final var persona = new Persona();
+    final var persona = new Persona();
     assertThat(values, hasSize(3));
     assertThat(values, hasItem(anyOf(equalTo("Oliver"), equalTo("Jack"), equalTo("Harry"))));
     assertThat(values, instanceOf(List.class));
     assertThat(persona, hasProperty("nombre"));
+    assertThat(null, nullValue());
+    assertThat(persona, notNullValue());
+		assertThat(1, anyOf(is(2), is(3), is(1))); 
+    assertThat(
+        persona,
+        allOf(hasProperty("nombre", not("sebastian")), hasProperty("edad", is(0))));
   }
 }
