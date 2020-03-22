@@ -1,4 +1,7 @@
 ```
+
+#### JUnit_in_Action_Third_Edition: https://www.manning.com/books/junit-in-action-third-edition
+
 - inner class annotated as @Nested that contains one or more test methods
 - test method: @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, or @TestTemplate
 - life cycle method: @BeforeAll, @AfterAll, @BeforeEach, or @AfterEach
@@ -21,3 +24,15 @@
     @RepeatedTest
 
 ```
+- A JUnit 4 runner is responsible for running JUnit tests (class that extends the JUnit 4 abstract Runner). 
+Extensions are the JUnit 5 equivalent. 
+xej: podría ejecutar código antes o despues de los test
+
+
+- JUnit 4 rule es un componente que intercepta llamadas a test, permite hacer algo antes que un test corra
+y algo despues que el test corra (especificos a JUnit 4).
+JUnit 5 obliga a implementar extensions
+
+- @Rule: public nonstatic field or a public nonstatic method
+
+- TemporaryFolder: permite crear archivos y carpetas que deben ser borradas cuando el test termine (pase o falle)
