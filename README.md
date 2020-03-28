@@ -1,7 +1,5 @@
-```
-
 #### JUnit_in_Action_Third_Edition: https://www.manning.com/books/junit-in-action-third-edition
-
+```
 - inner class annotated as @Nested that contains one or more test methods
 - test method: @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, or @TestTemplate
 - life cycle method: @BeforeAll, @AfterAll, @BeforeEach, or @AfterEach
@@ -36,3 +34,47 @@ JUnit 5 obliga a implementar extensions
 - @Rule: public nonstatic field or a public nonstatic method
 
 - TemporaryFolder: permite crear archivos y carpetas que deben ser borradas cuando el test termine (pase o falle)
+
+- JUnit 5 platform --- JUnit 5 Jupiter --- JUnit 5 Vintage
+
+
+```
+junit-      junit-       junit-             junit-platform-   IDEs
+platform-   platform-    platform-          gradle-plugin
+runne       console      surefire-provider
+  V           V             V                   V              V
+_____________________________________________________________________
+junit-platform-launcher
+---------------------------------------------------------------------
+        V
+_______________________________
+junit-platform-engine
+-------------------------------
+    V         V            V
+|junit  |  |junit  |  |custom-engine|
+|vintage|  |jupiter|       V
+|engine |  |engine |    custom-api
+   V             V
+junt-4.12     junit-jupiter-api
+```
+
+```
+anotaciones
+@BeforeClass, @AfterClass -> @BeforeAll, @AfterAll
+@Before, @After -> @BeforeEach, @AfterEach
+@Ignore -> @Disable
+@Category -> @Tag
+
+Assertions
+Assert -> Assertions
+assertThat -> assertAll, assertThrows.
+
+Assumptions
+Assume -> Assumptions
+assumeNotNull and assumeNoException -> removidos
+
+mensaje al principiio -> mensaje al final
+```
+
+
+

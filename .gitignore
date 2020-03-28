@@ -1,1 +1,8 @@
 /target/
+/.gradle/
+/build/
+/nbactions.xml
+/nb-configuration.xml
+/.classpath
+/.project
+/.settings/

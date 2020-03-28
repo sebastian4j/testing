@@ -81,16 +81,12 @@ public class HamcrestTesting {
   @DisplayName("List with Hamcrest")
   public void testListWithHamcrest() {
     final var values = List.of("Oliver", "2", "3");
-    final var persona = new Persona();
+    final var persona = new Persona("sebastian", 1);
     assertThat(values, hasSize(3));
     assertThat(values, hasItem(anyOf(equalTo("Oliver"), equalTo("Jack"), equalTo("Harry"))));
     assertThat(values, instanceOf(List.class));
-    assertThat(persona, hasProperty("nombre"));
     assertThat(null, nullValue());
     assertThat(persona, notNullValue());
-		assertThat(1, anyOf(is(2), is(3), is(1))); 
-    assertThat(
-        persona,
-        allOf(hasProperty("nombre", not("sebastian")), hasProperty("edad", is(0))));
+		assertThat(1, anyOf(is(2), is(3), is(1)));
   }
 }
