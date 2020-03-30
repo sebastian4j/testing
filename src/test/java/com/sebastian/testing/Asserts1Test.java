@@ -27,20 +27,20 @@ public class Asserts1Test {
   @Test
   @DisplayName("assertall")
   void assertall() {
-    assertAll("todos se ejecutan", () -> assertTrue(false), () -> assertNull(null));
+    assertAll("todos se ejecutan", () -> assertTrue(true), () -> assertNull(null));
   }
 
   @Test
   @DisplayName("assert supplier")
   void assertsup() {
-    assertFalse(true, () -> "supplier mensaje");
+    assertFalse(false, () -> "supplier mensaje");
   }
 
   @Test
   @DisplayName("assert timeout")
   void asserttimeout() {
     assertTimeout(Duration.ofSeconds(2), () -> {
-      final var tm = ThreadLocalRandom.current().nextInt(500, 4000);
+      final var tm = ThreadLocalRandom.current().nextInt(500, 2000);
       System.out.printf("timeout: %d",  tm);
       Thread.sleep(tm);
     }, () -> "error de timeout");
@@ -50,7 +50,7 @@ public class Asserts1Test {
   @DisplayName("assert se ejecuta de manera preventiva")
   void assertpreemptively() {
     assertTimeoutPreemptively(Duration.ofSeconds(2), () -> {
-      final var tm = ThreadLocalRandom.current().nextInt(500, 4000);
+      final var tm = ThreadLocalRandom.current().nextInt(500, 2000);
       System.out.printf("preventiva: %d",  tm);
       Thread.sleep(tm);
     }, () -> "error preventiva");
@@ -60,7 +60,7 @@ public class Asserts1Test {
   @DisplayName("assert exception")
   void assertexception() {
     assertThrows(NullPointerException.class, () -> {
-      throw new IllegalArgumentException();
+      throw new NullPointerException();
     });
   }
 }

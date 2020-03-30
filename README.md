@@ -75,6 +75,8 @@ assumeNotNull and assumeNoException -> removidos
 
 mensaje al principiio -> mensaje al final
 ```
+@RunWith(MockitoJUnitRunner.class) -> @ExtendWith(MockitoExtension.class)
+@RunWith(SpringJUnit4ClassRunner.class) -> @ExtendWith(SpringExtension.class)
 
 
 

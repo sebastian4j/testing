@@ -38,6 +38,7 @@ public class Junit4RuleTempFolder {
 
   @Test
   public void expectIllegalArgumentException() {
+    System.out.println("método expectIllegalArgumentException");
     ee.expect(IllegalArgumentException.class);
     ee.expectMessage("no puede ser negativo");
     calculator.sqrt(-1);
@@ -45,6 +46,7 @@ public class Junit4RuleTempFolder {
 
   @Test
   public void expectArithmeticException() {
+    System.out.println("método expectArithmeticException");
     ee.expect(ArithmeticException.class);
     ee.expectMessage("no puede dividir por zero");
     calculator.divide(1, 0);
@@ -60,6 +62,8 @@ public class Junit4RuleTempFolder {
 
   @AfterClass
   public static void cleanUpAfterAllTestsRan() {
+    System.out.println(cfd);
+    System.out.println(cfl);
     assertFalse(cfd.exists());
     assertFalse(cfl.exists());
   }
