@@ -8,7 +8,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-public class Junit5TempFolder {
+public class Junit5TempFolderTest {
   @TempDir
   Path tempDir; // no private
 

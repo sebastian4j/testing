@@ -3,7 +3,7 @@ package com.sebastian.testing;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-public class JUnit5ExceptionTester {
+public class JUnit5ExceptionTest {
   private Calculator calculator = new Calculator();
 
   @Test

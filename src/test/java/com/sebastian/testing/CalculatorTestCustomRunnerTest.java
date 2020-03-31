@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
  * @author Sebastián Ávila A.
  */
 @RunWith(Junit4CustomRunner2.class)
-public class CalculatorTestCustomRunner {
+public class CalculatorTestCustomRunnerTest {
 
   @Test
   public void testAdd() {

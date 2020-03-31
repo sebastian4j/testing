@@ -20,7 +20,7 @@ enum ParamEnum {
   CDE;
 }
 
-public class Parametrizado {
+public class ParametrizadoTest {
 
   /** recibe los valores del enum en interaciones, uno a la vez */
   @ParameterizedTest

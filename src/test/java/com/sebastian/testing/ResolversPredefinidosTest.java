@@ -9,7 +9,7 @@ import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.TestReporter;
 
 /** @author Sebastián Ávila A. */
-public class ResolversPredefinidos {
+public class ResolversPredefinidosTest {
 
   @Test
   void resolvers(TestReporter tr) {

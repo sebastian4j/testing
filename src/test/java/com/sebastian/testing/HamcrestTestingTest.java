@@ -75,7 +75,7 @@ import org.junit.jupiter.api.Test;
  *
  * @author Sebastián Ávila A.
  */
-public class HamcrestTesting {
+public class HamcrestTestingTest {
   @Test
 	@Tag("hamcrest")
   @DisplayName("List with Hamcrest")

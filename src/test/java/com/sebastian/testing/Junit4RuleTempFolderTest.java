@@ -14,7 +14,7 @@ import org.junit.rules.TemporaryFolder;
  *
  * @author Sebastián Ávila A.
  */
-public class Junit4RuleTempFolder {
+public class Junit4RuleTempFolderTest {
 
   @Rule
   public ExpectedException ee = ExpectedException.none();

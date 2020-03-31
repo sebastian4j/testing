@@ -79,4 +79,11 @@ mensaje al principiio -> mensaje al final
 @RunWith(SpringJUnit4ClassRunner.class) -> @ExtendWith(SpringExtension.class)
 
 
+### Tipos de Test doubles
+Dummy: se ocupan de relleno, no intervienen en la funcionalidad que se está probando (argumentos en firmas de métodos)
+Fake: implementaciones de componentes de la app que funcionan y son operativas pero no son adecuados de desplegar en producción, solo tienen que ser usados en ámbito de test (bd en memoria x reemplazo de una real en test)
+Stubs: respuestas predefinidas que se ofrecen como resultado a llamadas, importanta solo el estado retornado no como fue obtenido (relacion con otras entidades). (Json respondido de un servicio)
+Mocks: son capaces de analizar como se relacionan los distintos componentes, permiten verificar si un metodo concreto ha sido invocado, que parametros recibió, cuantas veces se invoco, … su foco es el analisis del comportamiento, como fue el paso de los mensajes
+
+
 

@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
  *
  */
 @Tag("segundo")
-public class Junit5TagSegundo {
+public class Junit5TagSegundoTest {
   @Test
   public void testSegundo() {
     assertTrue(true);

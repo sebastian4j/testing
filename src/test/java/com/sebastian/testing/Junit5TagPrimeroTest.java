@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
  *
  */
 @Tag("primero")
-public class Junit5TagPrimero {
+public class Junit5TagPrimeroTest {
   @Tag("t20")
   @Test
   public void testPrimero() {
