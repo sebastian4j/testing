@@ -1,5 +1,7 @@
-package com.sebastian.testing;
+package com.sebastian.testing.stub;
 
+import com.sebastian.testing.JettyStub;
+import com.sebastian.testing.WebClient;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.net.MalformedURLException;
 import java.net.URI;

@@ -1,5 +1,6 @@
-package com.sebastian.testing;
+package com.sebastian.testing.stub;
 
+import com.sebastian.testing.WebClient;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.IOException;
 import java.net.MalformedURLException;

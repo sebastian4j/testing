@@ -1,4 +1,4 @@
-package com.sebastian.testing;
+package com.sebastian.testing.stub;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
