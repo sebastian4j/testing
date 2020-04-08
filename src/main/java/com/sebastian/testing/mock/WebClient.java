@@ -13,6 +13,7 @@ public class WebClient {
       }
       workingContent = content.toString();
     } catch (Exception e) {
+			e.printStackTrace();
       workingContent = null;
     }
     return workingContent;
