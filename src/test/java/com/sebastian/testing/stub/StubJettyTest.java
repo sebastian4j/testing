@@ -5,7 +5,6 @@ import com.sebastian.testing.WebClient;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URL;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -20,22 +19,23 @@ import org.junit.jupiter.api.Test;
  */
 public class StubJettyTest {
   private static final JettyStub JS = new JettyStub();
+	/** uri en la que responde el server. */
   private static URI uri;
 
   @BeforeAll
-  public static void setUp() throws Exception {
-    uri = JS.start();
+  public static void beforeAll() throws Exception {
+    uri = JS.uri();
   }
 
   @AfterAll
-  public static void tearDown() throws Exception {
+  public static void afterAll() throws Exception {
     JS.stop();
   }
 
   @Test
   public void obtengoElContenidoEsperado() throws MalformedURLException {
-    WebClient client = new WebClient();
-    String json = client.getContent(new URL(uri.toString() + "demo.json"));
+    WebClient client = new WebClient();		
+    String json = client.getContent(uri.resolve("demo.json").toURL());
     assertEquals("{\"a\":\"b\",\"c\":\"d\"}", json);
   }
 }
