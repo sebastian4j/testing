@@ -1,15 +1,13 @@
 package com.sebastian.testing.mock;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import java.io.IOException;
 import java.io.InputStream;
-import static org.jmock.AbstractExpectations.onConsecutiveCalls;
-import static org.jmock.AbstractExpectations.returnValue;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.junit5.JUnit5Mockery;
 import org.jmock.lib.legacy.ClassImposteriser;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 

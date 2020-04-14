@@ -1,7 +1,7 @@
 package com.sebastian.testing.mock;
 
-import java.io.ByteArrayInputStream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.io.ByteArrayInputStream;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

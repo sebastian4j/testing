@@ -1,8 +1,8 @@
 package com.sebastian.testing;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.AfterClass;
 import org.junit.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.runner.RunWith;
 
 /**

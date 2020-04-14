@@ -1,12 +1,12 @@
 package com.sebastian.testing;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.io.File;
 import java.io.IOException;
 import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.TemporaryFolder;
 

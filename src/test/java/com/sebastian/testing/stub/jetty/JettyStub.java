@@ -1,12 +1,13 @@
-package com.sebastian.testing;
+package com.sebastian.testing.stub.jetty;
 
 import java.net.URI;
 import java.nio.file.Path;
 import java.util.concurrent.ThreadLocalRandom;
-import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
+import org.eclipse.jetty.servlet.ServletHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.resource.PathResource;
 
 /**
@@ -29,15 +30,20 @@ public class JettyStub {
     server.stop();
   }
 
-  private void crearServer(int port) throws Exception {
-    final var br =
-        new PathResource(Path.of(System.getProperty("user.dir") + "/target/test-classes"));
+  private void crearServer(int port) throws Exception {   
     server = new Server(port);
+    
+    // definir recursos desde el sistema de archivos
     final var rh = new ResourceHandler();
     rh.setDirectoriesListed(true);
-    rh.setBaseResource(br);
-    final var handlers = new HandlerList();
-    handlers.setHandlers(new Handler[] {rh});
-    server.setHandler(handlers);
+    rh.setBaseResource(new PathResource(
+        Path.of(System.getProperty("user.dir")).resolve("target/test-classes")));
+    
+    // definir servlets
+    final var sh = new ServletHandler();        
+    sh.addServletWithMapping(new ServletHolder(new HelloServlet()), "/hello/*");
+    
+    // agregar los handlers
+    server.setHandler(new HandlerList(rh, sh));
   }
 }

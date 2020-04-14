@@ -1,6 +1,5 @@
 package com.sebastian.testing.stub;
 
-import com.sebastian.testing.WebClient;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -10,6 +9,7 @@ import java.net.URLStreamHandler;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import com.sebastian.testing.WebClient;
 
 /**
  * desactivarlo para StubJettyTest.

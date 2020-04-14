@@ -1,10 +1,9 @@
 package com.sebastian.testing.mock;
 
-import static org.jmock.AbstractExpectations.returnValue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.junit5.JUnit5Mockery;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
